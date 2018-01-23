@@ -6,6 +6,9 @@ import { RenderReactPlaceholder } from '../components/Placeholder'
 
 import MainLayout from '../components/Main/MainLayout'
 import PageHeader from '../components/Header/PageHeader'
+import CollapsibleNav from '../components/Navigation/CollapsibleNav'
+import LabeledLink from '../components/Navigation/LabeledLink'
+import VisualisedNavigationItem from '../components/Navigation/VisualisedNavigationItem'
 
 import '../../bundles/main.css'
 
@@ -19,6 +22,22 @@ const headerNavigation = {
       "behaviour": null,
       "icon": null,
       "image": null,
+      "children": {
+        "secondaryNavigation": [
+          {
+            "title":"Kleine Dozen",
+            "label": "",
+            "link": "#",
+            "target": "",
+            "behaviour": null,
+            "icon": null,
+            "image": null,
+            "active": false,
+            "level": 2,
+            "alignment": null
+          }
+        ]
+      },
       "active": typeof location !== 'undefined' ? location.pathname === '/dozen' : false,
       "level": 1,
       "alignment": null
@@ -45,6 +64,20 @@ const headerNavigation = {
       "image": null,
       "active": false,
       "level": 1,
+      "alignment": null
+    }
+  ],
+  "secondaryNavigation": [
+    {
+      "title":"Kleinere Dozen",
+      "label": "",
+      "link": "#",
+      "target": "",
+      "behaviour": null,
+      "icon": null,
+      "image": null,
+      "active": false,
+      "level": 2,
       "alignment": null
     }
   ]
