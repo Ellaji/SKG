@@ -6,7 +6,17 @@ import NavBar from '../src/components/Navigation/NavBar';
 const navigationContent = [
     {
         "text": "Link 1",
-        "url": "#"
+        "url": "#",
+        "submenu": [
+            {
+                "text": "Sublink 1",
+                "url": "#",
+            },
+            {
+                "text": "Sublink 2",
+                "url":"#",
+            }
+        ]
     },
     {
         "text": "Link 2",
@@ -30,7 +40,7 @@ const navigationContent = [
 
 storiesOf('NavBar', module)
     .add('Default', () => (
-        <nav className="header__navigation"> 
+        <nav> 
             <NavBar items={navigationContent}/>
         </nav>
     ));

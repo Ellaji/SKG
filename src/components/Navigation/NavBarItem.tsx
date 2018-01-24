@@ -1,8 +1,8 @@
 import * as React from 'react'
+import { NavBarLinkProps } from './NavBarLink'
+import NavBarLink from './NavBarLink'
 import NavBar from './NavBar'
-import NavBarLinkProps from './NavBarLink'
-import NavBarLink from './NavBarItem'
-
+import NavBarSubMenu from './NavBarSubMenu'
 
 export interface NavBarItemProps {
     text: string;
@@ -23,7 +23,7 @@ export default class NavBarItem extends React.Component<NavBarItemProps> {
     
     generateSubmenu() {
         return (
-            <NavBar items={this.props.submenu} />
+            <NavBarSubMenu items={this.props.submenu} />
         );
     }
 

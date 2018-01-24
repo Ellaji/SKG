@@ -1,12 +1,9 @@
 import * as React from 'react'
 import NavBarItem from './NavBarItem'
 import { NavBarItemProps } from './NavBarItem'
+import { NavBarProps } from './NavBar'
 
-export interface NavBarProps {
-    items: NavBarItemProps[];
-}
-
-export default class NavBar extends React.Component<NavBarProps> {
+export default class NavBarSubMenu extends React.Component<NavBarProps> {
     constructor(props) {
         super(props);
     }
@@ -20,7 +17,7 @@ export default class NavBar extends React.Component<NavBarProps> {
     render() {
         var items = this.props.items.map(this.generateItem);
         return (
-            <ul className="header__navigation">
+            <ul className="header__navigation__submenu">
                 {items}
             </ul>
         );
