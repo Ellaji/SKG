@@ -7,6 +7,7 @@ function loadStories() {
   require('../stories/Breadcrumb');
   require('../stories/PageHeader');
   require('../stories/MainNav');
+  require('../stories/NavBar');
 }
 
 configure(loadStories, module);
