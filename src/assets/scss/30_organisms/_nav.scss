@@ -70,12 +70,11 @@
 
 .header__navigation {
     list-style: none; 
-    width: 100%;
-    padding: 0;
+    padding: 0 20px 0;
+    text-align: right;
     
     li {
         display: inline-block;
-        float: right;
     }
 
     li:active {
@@ -87,7 +86,8 @@
         text-decoration: none;
         vertical-align: middle;
         text-align: left;
-        width: 100px;
+        min-width: 100px;
+        padding: 0 20px;
         height: 50px;
         line-height: 50px;
     }
@@ -110,8 +110,11 @@
 
         li {
             display: block;
-            float: none;
-            padding-left: 20px;
+            white-space: nowrap;
+        }
+
+        .header__navigation__submenu ul {
+            position: relative;
         }
     }
 }

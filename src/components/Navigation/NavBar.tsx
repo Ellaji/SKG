@@ -11,9 +11,9 @@ export default class NavBar extends React.Component<NavBarProps> {
         super(props);
     }
 
-    generateItem(item) {
+    generateItem(item, index) {
         return (
-            <NavBarItem text={item.text} url={item.url} submenu={item.submenu} />
+            <NavBarItem key={index} text={item.text} url={item.url} submenu={item.submenu} />
         )
     }
 

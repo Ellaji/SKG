@@ -1,6 +1,5 @@
 import * as React from 'react'
 import NavBarItem from './NavBarItem'
-import { NavBarItemProps } from './NavBarItem'
 import { NavBarProps } from './NavBar'
 
 export default class NavBarSubMenu extends React.Component<NavBarProps> {
@@ -8,10 +7,10 @@ export default class NavBarSubMenu extends React.Component<NavBarProps> {
         super(props);
     }
 
-    generateItem(item) {
+    generateItem(item, index) {
         return (
-            <NavBarItem text={item.text} url={item.url} submenu={item.submenu} />
-        )
+            <NavBarItem key={index} text={item.text} url={item.url} submenu={item.submenu} />
+        );
     }
 
     render() {

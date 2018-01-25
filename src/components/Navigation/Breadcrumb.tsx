@@ -18,7 +18,7 @@ const Breadcrumb = ({links} : BreadcrumbProps) => {
                         let Element = index+1 === links.length ? 'span' : 'a';
                         return (
                             <li key={index} itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
-                                <Element href={Element === 'a' && link.url} target={Element === 'a' && link.target} itemProp="item">{link.text}</Element>
+                                <Element href={Element === 'a'? link.url:null} target={Element === 'a'? link.target:null} itemProp="item">{link.text}</Element>
                             </li>
                         )
                     })}
